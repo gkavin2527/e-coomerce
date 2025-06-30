@@ -333,7 +333,7 @@ const ProductDetails = (props: Props) => {
   }, [product])
 
   const getProductDetails = async () => {
-    const URL = productType === "sale" ? `http://localhost:8000/saleProducts/${id}` : `http://localhost:8000/products/${id}`;
+    const URL = productType === "sale" ? `http://192.168.0.100:8000/saleProducts/${id}` : `http://192.168.0.100:8000/products/${id}`;
     const response = await axios.get(URL);
     console.log(response.data);
     setProduct(response.data);
